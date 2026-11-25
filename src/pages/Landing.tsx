@@ -92,8 +92,8 @@ const FAQS = [
     a: 'You can start using Inbox E-invoicing immediately to standardize invoicing, TRN records, and PINT-AE XML generation. Direct Peppol 5-corner ASP transmission connects seamlessly as the FTA pilot opens.',
   },
   {
-    q: 'Can I use Inbox E-invoicing for free?',
-    a: 'Yes. Our Starter plan is permanently free for up to 50 invoices per month, including PDF export, VAT calculations, and your full client directory — no credit card required.',
+    q: 'How much does Inbox E-invoicing cost?',
+    a: 'Pricing is tailored to your business — invoice volume, legal entities, and integrations. Contact our sales team for a quote, or explore the full product first in the free live demo workspace.',
   },
   {
     q: 'Does Inbox E-invoicing support Arabic invoices?',
@@ -202,7 +202,7 @@ export default function Landing() {
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Button size="lg" onClick={() => navigate('/register')}>
-              Start Free
+              Get Started
               <ArrowRight className="w-4 h-4" />
             </Button>
             <Button
@@ -217,7 +217,7 @@ export default function Landing() {
           </div>
 
           <p className="mt-4 text-xs text-[#A8A29E]">
-            Free for up to 50 invoices/month · No credit card required · Full demo workspace included
+            Full live demo workspace · No sign-up or credit card required · Custom pricing for your business
           </p>
 
           {/* Browser Chrome Product Showcase */}
@@ -518,57 +518,31 @@ export default function Landing() {
               Simple pricing. No surprises.
             </h2>
             <p className="mt-3 text-base text-[#78716C]">
-              Transparent AED pricing built for UAE freelancers, agencies, and growing SMBs.
+              One plan, tailored to your invoice volume, entities, and integrations.
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
-            {/* Starter */}
-            <div className="bg-white rounded-xl border border-[#E7E5E4] p-7 flex flex-col">
-              <p className="text-sm font-semibold text-[#1C1917]">Starter</p>
-              <p className="text-xs text-[#78716C] mt-1">For freelancers &amp; solo consultants</p>
-              <p className="mt-5 text-4xl font-bold tabular-nums">Free</p>
-              <p className="text-xs text-[#A8A29E] mt-1">Forever free · no card needed</p>
+          <div className="mt-12 max-w-md mx-auto">
+            {/* Custom plan */}
+            <div className="bg-white rounded-xl border-2 border-[#F26522] p-7 flex flex-col shadow-md">
+              <p className="text-sm font-semibold text-[#1C1917]">Enterprise</p>
+              <p className="text-xs text-[#78716C] mt-1">
+                For growing SMBs, multi-entity groups &amp; ERP teams
+              </p>
+              <p className="mt-5 text-4xl font-bold">Custom</p>
+              <p className="text-xs text-[#A8A29E] mt-1">Annual billing &amp; SLA</p>
               <ul className="mt-6 space-y-3 text-sm text-[#44403C] flex-1">
                 {[
-                  'Up to 50 invoices / month',
-                  '1 user seat',
-                  'Bilingual PDF export with QR',
-                  'UAE 5% VAT calculations',
-                  'Client directory & TRN validation',
-                ].map((f) => (
-                  <li key={f} className="flex items-center gap-2.5">
-                    <Check className="w-4 h-4 text-[#16A34A] shrink-0" />
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button variant="secondary" className="w-full mt-7" onClick={() => navigate('/register')}>
-                Get Started
-              </Button>
-            </div>
-
-            {/* Business */}
-            <div className="bg-white rounded-xl border-2 border-[#F26522] p-7 flex flex-col shadow-md relative">
-              <div className="flex items-center justify-between">
-                <p className="text-sm font-semibold text-[#1C1917]">Business</p>
-                <span className="text-xs font-semibold text-[#F26522]">Most Popular</span>
-              </div>
-              <p className="text-xs text-[#78716C] mt-1">For UAE SMBs &amp; trading companies</p>
-              <div className="mt-5 flex items-baseline gap-1">
-                <span className="text-4xl font-bold tabular-nums">AED 99</span>
-                <span className="text-sm text-[#78716C]">/month</span>
-              </div>
-              <p className="text-xs text-[#A8A29E] mt-1">14-day free trial included</p>
-              <ul className="mt-6 space-y-3 text-sm text-[#44403C] flex-1">
-                {[
-                  'Unlimited invoices',
-                  'Up to 5 team members',
-                  'Everything in Starter',
+                  'Unlimited invoices & entities',
+                  'Unlimited team members',
+                  'Bilingual PDF export with FTA QR code',
+                  'UAE VAT calculations & VAT 201 summaries',
                   'Credit notes & adjustments',
                   'PINT-AE UBL 2.1 XML export',
                   'Custom company branding & logo',
-                  'VAT 201 return summaries',
+                  'REST API & webhook access',
+                  'Peppol ASP integration ready',
+                  'Dedicated UAE account manager',
                 ].map((f) => (
                   <li key={f} className="flex items-center gap-2.5">
                     <Check className="w-4 h-4 text-[#F26522] shrink-0" />
@@ -577,32 +551,6 @@ export default function Landing() {
                 ))}
               </ul>
               <Button className="w-full mt-7" onClick={() => navigate('/register')}>
-                Start Free Trial
-              </Button>
-            </div>
-
-            {/* Enterprise */}
-            <div className="bg-white rounded-xl border border-[#E7E5E4] p-7 flex flex-col">
-              <p className="text-sm font-semibold text-[#1C1917]">Enterprise</p>
-              <p className="text-xs text-[#78716C] mt-1">For multi-entity groups &amp; ERP teams</p>
-              <p className="mt-5 text-4xl font-bold">Custom</p>
-              <p className="text-xs text-[#A8A29E] mt-1">Annual billing &amp; SLA</p>
-              <ul className="mt-6 space-y-3 text-sm text-[#44403C] flex-1">
-                {[
-                  'Unlimited invoices & entities',
-                  'Unlimited team members',
-                  'Everything in Business',
-                  'REST API & webhook access',
-                  'Peppol ASP integration ready',
-                  'Dedicated UAE account manager',
-                ].map((f) => (
-                  <li key={f} className="flex items-center gap-2.5">
-                    <Check className="w-4 h-4 text-[#16A34A] shrink-0" />
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button variant="secondary" className="w-full mt-7" onClick={() => navigate('/register')}>
                 Contact Sales
               </Button>
             </div>
@@ -662,7 +610,7 @@ export default function Landing() {
           </p>
           <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
             <Button size="lg" onClick={() => navigate('/register')}>
-              Get Started Free
+              Get Started
               <ArrowRight className="w-4 h-4" />
             </Button>
             <Button size="lg" variant="secondary" loading={demoLoading} onClick={handleLaunchDemo}>
