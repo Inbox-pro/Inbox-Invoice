@@ -100,7 +100,7 @@ export default function Onboarding() {
           };
       const res = await api.put<{ success: boolean; data: Company }>('/api/company', payload);
       setCompany(res.data);
-      toast.success('Company setup complete! Welcome to Inbox Invoice.');
+      toast.success('Company setup complete! Welcome to Inbox E-invoicing.');
       navigate('/dashboard');
     } catch (err) {
       toast.error(err instanceof ApiError ? err.message : 'Could not save company setup');

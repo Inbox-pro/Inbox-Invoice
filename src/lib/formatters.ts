@@ -326,7 +326,7 @@ export function downloadInvoicePdf(invoice: Invoice, company: Company): void {
     margin,
     footerY
   );
-  doc.text('Generated with Inbox Invoice · Inbox Infotech', pageWidth - margin, footerY, { align: 'right' });
+  doc.text('Generated with Inbox E-invoicing · Inbox Infotech', pageWidth - margin, footerY, { align: 'right' });
 
   doc.save(`${invoice.invoiceNumber}.pdf`);
 }

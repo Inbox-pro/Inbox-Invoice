@@ -66,7 +66,7 @@ class AppErrorBoundary extends React.Component<
               onClick={() => window.location.reload()}
               className="px-4 py-2 rounded-md bg-[#F26522] text-white text-sm font-medium hover:bg-[#E05A1B] cursor-pointer"
             >
-              Reload Inbox Invoice
+              Reload Inbox E-invoicing
             </button>
           </div>
         </div>

@@ -60,7 +60,7 @@ export default function AppLayout() {
   const sidebarContent = (
     <div className="flex flex-col h-full bg-[#FAFAF9] border-r border-[#E7E5E4]">
       <div className="px-5 pt-5 pb-4 border-b border-[#F0EEEC]">
-        <div className="flex items-center justify-between">
+        <div className="relative flex items-center">
           <button
             type="button"
             onClick={() => navigate('/dashboard')}
@@ -71,7 +71,7 @@ export default function AppLayout() {
           <button
             type="button"
             onClick={() => setMobileOpen(false)}
-            className="lg:hidden p-1.5 rounded-md text-[#78716C] hover:bg-[#F5F5F4]"
+            className="lg:hidden absolute -right-3 -top-3 p-1.5 rounded-md text-[#78716C] hover:bg-[#F5F5F4]"
             aria-label="Close navigation"
           >
             <X className="w-5 h-5" />

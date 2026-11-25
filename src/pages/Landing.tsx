@@ -80,7 +80,7 @@ const FAQS = [
     a: 'Under Ministerial Decisions 243 & 244 of 2025, the UAE Federal Tax Authority requires businesses to exchange structured electronic invoices in PINT-AE UBL 2.1 XML format rather than unstructured PDFs or Word documents.',
   },
   {
-    q: 'Is Inbox Invoice FTA-compliant?',
+    q: 'Is Inbox E-invoicing FTA-compliant?',
     a: 'Yes. Every invoice is validated against all 51 mandatory PINT-AE data fields before sending, calculates VAT per line item according to UAE schedules, embeds a compliant QR code, and exports valid PINT-AE UBL 2.1 XML.',
   },
   {
@@ -88,15 +88,15 @@ const FAQS = [
     a: 'Phased mandatory rollout begins in January 2027 following the 2026 pilot program. Transitioning your invoicing workflow now ensures clean TRN records and zero disruption.',
   },
   {
-    q: 'Do I need an Accredited Service Provider (ASP) to use Inbox Invoice?',
-    a: 'You can start using Inbox Invoice immediately to standardize invoicing, TRN records, and PINT-AE XML generation. Direct Peppol 5-corner ASP transmission connects seamlessly as the FTA pilot opens.',
+    q: 'Do I need an Accredited Service Provider (ASP) to use Inbox E-invoicing?',
+    a: 'You can start using Inbox E-invoicing immediately to standardize invoicing, TRN records, and PINT-AE XML generation. Direct Peppol 5-corner ASP transmission connects seamlessly as the FTA pilot opens.',
   },
   {
-    q: 'Can I use Inbox Invoice for free?',
+    q: 'Can I use Inbox E-invoicing for free?',
     a: 'Yes. Our Starter plan is permanently free for up to 50 invoices per month, including PDF export, VAT calculations, and your full client directory — no credit card required.',
   },
   {
-    q: 'Does Inbox Invoice support Arabic invoices?',
+    q: 'Does Inbox E-invoicing support Arabic invoices?',
     a: 'Yes. Every Tax Invoice includes bilingual English and Arabic headers ("TAX INVOICE / فاتورة ضريبية") plus RTL Arabic company and client legal names.',
   },
   {
@@ -105,7 +105,7 @@ const FAQS = [
   },
   {
     q: 'Can I issue credit notes against existing invoices?',
-    a: 'Yes. Inbox Invoice links credit notes directly to original tax invoices with automatic sequential numbering (CN-00001), balance adjustments, and VAT return reflection.',
+    a: 'Yes. Inbox E-invoicing links credit notes directly to original tax invoices with automatic sequential numbering (CN-00001), balance adjustments, and VAT return reflection.',
   },
 ];
 
@@ -352,7 +352,7 @@ export default function Landing() {
               Everything you need to invoice with confidence.
             </h2>
             <p className="mt-3 text-base text-[#78716C]">
-              From bilingual creation to PINT-AE validation, Inbox Invoice handles compliance so you can focus on growing your business.
+              From bilingual creation to PINT-AE validation, Inbox E-invoicing handles compliance so you can focus on growing your business.
             </p>
           </div>
 
@@ -658,7 +658,7 @@ export default function Landing() {
             Ready to simplify your UAE invoicing?
           </h2>
           <p className="mt-3 text-base text-[#78716C] max-w-xl mx-auto">
-            Join 500+ businesses simplifying e-invoicing compliance with Inbox Invoice by Inbox Infotech.
+            Join 500+ businesses simplifying e-invoicing compliance with Inbox E-invoicing by Inbox Infotech.
           </p>
           <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
             <Button size="lg" onClick={() => navigate('/register')}>
@@ -715,7 +715,7 @@ export default function Landing() {
           </div>
 
           <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[#A8A29E]">
-            <p>© 2026 Inbox Infotech — Inbox Invoice. All rights reserved.</p>
+            <p>© 2026 Inbox Infotech — Inbox E-invoicing. All rights reserved.</p>
             <p>E-Invoicing Software | GST e-invoicing System</p>
           </div>
         </div>

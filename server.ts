@@ -2080,7 +2080,7 @@ async function startServer() {
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Fatoora server running on http://localhost:${PORT} (listening on all interfaces)`);
+    console.log(`Inbox E-invoicing server running on http://localhost:${PORT} (listening on all interfaces)`);
   });
 }
 

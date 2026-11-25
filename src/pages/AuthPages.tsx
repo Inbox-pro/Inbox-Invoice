@@ -19,7 +19,7 @@ function AuthSplitLayout({ children }: { children: React.ReactNode }) {
         </div>
         <div className="w-full max-w-md mx-auto my-8">{children}</div>
         <p className="text-xs text-[#A8A29E]">
-          © 2026 Inbox Infotech — Inbox Invoice · E-Invoicing Software &amp; GST e-invoicing System
+          © 2026 Inbox Infotech — Inbox E-invoicing · E-Invoicing Software &amp; GST e-invoicing System
         </p>
       </div>
 
@@ -31,7 +31,7 @@ function AuthSplitLayout({ children }: { children: React.ReactNode }) {
 
         <div className="max-w-md">
           <blockquote className="text-2xl font-semibold text-[#1C1917] leading-snug">
-            “Switching from Excel invoices to Inbox Invoice cut our monthly billing time by 70% and simplified our e-invoicing compliance.”
+            “Switching from Excel invoices to Inbox E-invoicing cut our monthly billing time by 70% and simplified our e-invoicing compliance.”
           </blockquote>
           <div className="mt-6">
             <p className="text-sm font-semibold text-[#1C1917]">Omar Al Mansoori</p>
@@ -47,7 +47,7 @@ function AuthSplitLayout({ children }: { children: React.ReactNode }) {
             </div>
             <div className="bg-white/80 backdrop-blur rounded-lg border border-[#E7E5E4] p-4">
               <p className="text-2xl font-bold text-[#1C1917] tabular-nums">500+</p>
-              <p className="text-xs text-[#78716C] mt-1">Businesses invoicing with Inbox Invoice</p>
+              <p className="text-xs text-[#78716C] mt-1">Businesses invoicing with Inbox E-invoicing</p>
             </div>
           </div>
         </div>

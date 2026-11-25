@@ -5,6 +5,7 @@ import type { CreditNoteStatus, InvoiceStatus } from '../../../shared/types.ts';
 export function FatooraLogo({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
   const iconSize = size === 'sm' ? 'w-7 h-7' : size === 'lg' ? 'w-9 h-9' : 'w-8 h-8';
   const textSize = size === 'sm' ? 'text-base' : size === 'lg' ? 'text-xl' : 'text-lg';
+  const subTextSize = size === 'lg' ? 'text-[11px]' : 'text-[10px]';
   return (
     <span className="inline-flex items-center gap-2.5 select-none whitespace-nowrap shrink-0">
       <span
@@ -17,8 +18,15 @@ export function FatooraLogo({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
           />
         </svg>
       </span>
-      <span className={`${textSize} font-bold tracking-tight text-[#1C1917]`}>
-        Inbox Invoice
+      <span className="flex flex-col leading-none">
+        <span className={`${textSize} font-bold tracking-tight text-[#1C1917] leading-tight`}>
+          Inbox E-invoicing
+        </span>
+        <span
+          className={`${subTextSize} font-semibold uppercase tracking-[0.14em] text-[#F26522] mt-0.5`}
+        >
+          Inbox Infotech
+        </span>
       </span>
     </span>
   );
