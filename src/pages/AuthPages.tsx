@@ -5,6 +5,7 @@ import { toast } from 'sonner';
 import { api, ApiError } from '../services/api.ts';
 import { useAuthStore } from '../stores/authStore.ts';
 import { UAE_EMIRATES } from '../../shared/schemas.ts';
+import { DEMO_PASSWORD, DEMO_USER_EMAIL } from '../../shared/demo.ts';
 import { Button, FatooraLogo, Input, Select } from '../components/ui/Primitives.tsx';
 import type { Company, User } from '../../shared/types.ts';
 
@@ -63,8 +64,9 @@ function AuthSplitLayout({ children }: { children: React.ReactNode }) {
 export function LoginPage() {
   const navigate = useNavigate();
   const setSession = useAuthStore((s) => s.setSession);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  // Pre-filled with the demo account so visitors can sign in with one click.
+  const [email, setEmail] = useState(DEMO_USER_EMAIL);
+  const [password, setPassword] = useState(DEMO_PASSWORD);
   const [loading, setLoading] = useState(false);
   const [demoLoading, setDemoLoading] = useState(false);
   const [error, setError] = useState('');
@@ -119,7 +121,32 @@ export function LoginPage() {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+      <div className="mt-5 p-3 rounded-md bg-[#FFF3ED] border border-[#FDBA74]/50 text-xs text-[#44403C]">
+        <div className="flex items-center justify-between gap-3">
+          <p className="font-semibold text-[#1C1917]">Demo account</p>
+          {(email !== DEMO_USER_EMAIL || password !== DEMO_PASSWORD) && (
+            <button
+              type="button"
+              onClick={() => {
+                setEmail(DEMO_USER_EMAIL);
+                setPassword(DEMO_PASSWORD);
+                setError('');
+              }}
+              className="font-medium text-[#F26522] hover:text-[#E05A1B]"
+            >
+              Fill in demo details
+            </button>
+          )}
+        </div>
+        <p className="mt-1.5">
+          Email: <span className="font-mono">{DEMO_USER_EMAIL}</span>
+        </p>
+        <p>
+          Password: <span className="font-mono">{DEMO_PASSWORD}</span>
+        </p>
+      </div>
+
+      <form onSubmit={handleSubmit} className="mt-5 space-y-4">
         <Input
           label="Email address"
           type="email"

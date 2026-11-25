@@ -16,6 +16,7 @@ import type {
 } from '../shared/types.ts';
 import { calculateInvoiceTotals, roundMoney } from '../shared/schemas.ts';
 import { buildFtaQrPayload } from './fta.ts';
+import { DEMO_PASSWORD, DEMO_USER_EMAIL } from '../shared/demo.ts';
 
 export interface StoredUser extends User {
   passwordHash: string;
@@ -31,8 +32,8 @@ export interface DatabaseState {
   activities: Activity[];
 }
 
-/** Password for every seeded demo user (omar@ / fatima@nexusdigital.ae). */
-export const DEMO_PASSWORD = 'DemoUser#2026!';
+/** Every seeded demo user (omar@ / fatima@nexusdigital.ae) shares DEMO_PASSWORD. */
+export { DEMO_PASSWORD, DEMO_USER_EMAIL };
 
 export function formatInvoiceNumber(prefix: string, num: number): string {
   return `${prefix}-${String(num).padStart(5, '0')}`;
@@ -88,7 +89,7 @@ export function buildSeedState(demoPasswordHash: string): DatabaseState {
   const users: StoredUser[] = [
     {
       id: ownerId,
-      email: 'omar@nexusdigital.ae',
+      email: DEMO_USER_EMAIL,
       passwordHash: demoHash,
       firstName: 'Omar',
       lastName: 'Al Mansoori',
